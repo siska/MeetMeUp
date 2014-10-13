@@ -31,7 +31,10 @@
 
         if (data)
         {
-            self.eventsInfoArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+            NSDictionary *tempDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError]; //this pulls in entire dictionary with two keys - results and meta - we just want results
+            self.eventsInfoArray = [tempDict objectForKey:@"results"]; //this just gives us the results object and puts it in my eventsInfoArray
+
+            //self.eventsInfoArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
             [self.tableView reloadData];
         }
 
@@ -49,8 +52,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    NSDictionary *eventDict = [self.eventsInfoArray objectAtIndex:indexPath.row];
 
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELLID"]; // forIndexPath:indexPath];
+
+    cell.textLabel.text = [eventDict objectForKey:@"name"];
+    return cell;
 }
 
 
