@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MeetUpEvent.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property NSArray *eventsInfoArray;
@@ -66,14 +67,6 @@
     cell.detailTextLabel.text = [forVenue objectForKey:@"address_1"];
     return cell;
 }
-
-
-
-
-
-
-
-
 
 
 

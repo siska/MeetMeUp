@@ -14,6 +14,7 @@
 		1210AE4E19EC576900BBAC4B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1210AE4D19EC576900BBAC4B /* Images.xcassets */; };
 		1210AE5119EC576900BBAC4B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1210AE4F19EC576900BBAC4B /* LaunchScreen.xib */; };
 		1210AE5D19EC576900BBAC4B /* MeetMeUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210AE5C19EC576900BBAC4B /* MeetMeUpTests.m */; };
+		1210AE6B19EC7C6900BBAC4B /* MeetUpEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210AE6A19EC7C6900BBAC4B /* MeetUpEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		1210AE5619EC576900BBAC4B /* MeetMeUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetMeUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1210AE5B19EC576900BBAC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1210AE5C19EC576900BBAC4B /* MeetMeUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetMeUpTests.m; sourceTree = "<group>"; };
+		1210AE6919EC7C6900BBAC4B /* MeetUpEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetUpEvent.h; path = ../MeetUpEvent.h; sourceTree = "<group>"; };
+		1210AE6A19EC7C6900BBAC4B /* MeetUpEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetUpEvent.m; path = ../MeetUpEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				1210AE4A19EC576900BBAC4B /* Main.storyboard */,
 				1210AE4719EC576900BBAC4B /* ViewController.h */,
 				1210AE4819EC576900BBAC4B /* ViewController.m */,
+				1210AE6919EC7C6900BBAC4B /* MeetUpEvent.h */,
+				1210AE6A19EC7C6900BBAC4B /* MeetUpEvent.m */,
 				1210AE4D19EC576900BBAC4B /* Images.xcassets */,
 				1210AE4F19EC576900BBAC4B /* LaunchScreen.xib */,
 				1210AE4019EC576900BBAC4B /* Supporting Files */,
@@ -221,6 +226,7 @@
 			files = (
 				1210AE4919EC576900BBAC4B /* ViewController.m in Sources */,
 				1210AE4619EC576900BBAC4B /* AppDelegate.m in Sources */,
+				1210AE6B19EC7C6900BBAC4B /* MeetUpEvent.m in Sources */,
 				1210AE4319EC576900BBAC4B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +418,7 @@
 				1210AE6219EC576900BBAC4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1210AE6319EC576900BBAC4B /* Build configuration list for PBXNativeTarget "MeetMeUpTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				1210AE6519EC576900BBAC4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

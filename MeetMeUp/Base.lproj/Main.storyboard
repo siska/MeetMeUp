@@ -41,6 +41,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="lIL-1o-t8S" kind="show" id="08H-kN-iZ4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -65,6 +68,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="810" y="-557"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="X7y-Dj-ZdG">
+            <objects>
+                <viewController id="lIL-1o-t8S" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Xu-ci-JuO"/>
+                        <viewControllerLayoutGuide type="bottom" id="UOo-dG-l6S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w1N-mg-AGP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cs7-OW-5Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1466" y="-557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KJH-mq-d9M">
