@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property NSArray *eventsInfoArray;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
@@ -39,6 +39,26 @@
         NSLog(@"JSON Error: %@", jsonError);
     }];
 }
+
+#pragma mark - TableViewDataSource Delegate Methods
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.eventsInfoArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return nil;
+
+}
+
+
+
+
+
+
+
 
 
 
