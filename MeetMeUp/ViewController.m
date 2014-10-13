@@ -10,6 +10,9 @@
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property NSArray *eventsInfoArray;
+//@property NSDictionary *eventsDictionary;
+//created to hold onto clean "results" dictionary to get to venue and lower levels - unnecessary - info added below in viewDidLoadaddress_1
+
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -24,8 +27,9 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
     {
-        NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", jsonString); //used to see if correctly retrieving data
+//        NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//        NSLog(@"%@", jsonString); //used to see if correctly retrieving data
+// got rid of the above as the JSON request is working - will add back if error
 
         NSError *jsonError = nil;
 
@@ -33,6 +37,7 @@
         {
             NSDictionary *tempDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError]; //this pulls in entire dictionary with two keys - results and meta - we just want results
             self.eventsInfoArray = [tempDict objectForKey:@"results"]; //this just gives us the results object and puts it in my eventsInfoArray
+            // unnecessary - thought I needed it in step two to get the venue in cellForRow... but instead I can just convert the array back to NSDict - self.eventsDictionary = [tempDict objectForKey:@"results"];
 
             //self.eventsInfoArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
             [self.tableView reloadData];
@@ -53,10 +58,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *eventDict = [self.eventsInfoArray objectAtIndex:indexPath.row];
+    NSDictionary *forVenue = [eventDict objectForKey:@"venue"];
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELLID"]; // forIndexPath:indexPath];
 
     cell.textLabel.text = [eventDict objectForKey:@"name"];
+    cell.detailTextLabel.text = [forVenue objectForKey:@"address_1"];
     return cell;
 }
 
