@@ -7,13 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "MeetUpEvent.h"
+#import "DetailViewController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property NSArray *eventsInfoArray;
 //@property NSDictionary *eventsDictionary;
 //created to hold onto clean "results" dictionary to get to venue and lower levels - unnecessary - info added below in viewDidLoadaddress_1
-
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -47,6 +46,16 @@
         NSLog(@"Connection Error: %@", connectionError);
         NSLog(@"JSON Error: %@", jsonError);
     }];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell
+{
+    NSIndexPath *path = [self.tableView indexPathForCell:cell];
+    NSDictionary *tempEventDict = [self.eventsInfoArray objectAtIndex:path.row];
+
+    DetailViewController *detailViewController = [segue destinationViewController];
+    //NSLog(@"%@", tempEventArray);
+    detailViewController.eventSegue = tempEventDict;
 }
 
 #pragma mark - TableViewDataSource Delegate Methods

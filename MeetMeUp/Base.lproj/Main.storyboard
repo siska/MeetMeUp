@@ -62,17 +62,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="NxF-vC-UxZ"/>
                     <connections>
-                        <outlet property="tableView" destination="aYO-YA-h4P" id="Ka3-f0-RUf"/>
+                        <outlet property="tableView" destination="aYO-YA-h4P" id="iiK-Di-ubM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="810" y="-557"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="X7y-Dj-ZdG">
             <objects>
-                <viewController id="lIL-1o-t8S" sceneMemberID="viewController">
+                <viewController id="lIL-1o-t8S" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Xu-ci-JuO"/>
                         <viewControllerLayoutGuide type="bottom" id="UOo-dG-l6S"/>
@@ -80,8 +80,46 @@
                     <view key="view" contentMode="scaleToFill" id="w1N-mg-AGP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Event Name" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4W-gS-J9r">
+                                <rect key="frame" x="0.0" y="97" width="600" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="RSVP Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbo-bE-tak">
+                                <rect key="frame" x="0.0" y="208" width="600" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hosting Group" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQA-lt-lxc">
+                                <rect key="frame" x="0.0" y="253" width="600" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijg-oz-rnG">
+                                <rect key="frame" x="0.0" y="334" width="600" height="233"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Ijg-oz-rnG" secondAttribute="centerX" id="5zu-Dr-vIH"/>
+                            <constraint firstAttribute="centerX" secondItem="q4W-gS-J9r" secondAttribute="centerX" id="6Qs-vN-AkX"/>
+                            <constraint firstAttribute="centerX" secondItem="sbo-bE-tak" secondAttribute="centerX" id="YCc-zH-rPF"/>
+                            <constraint firstAttribute="centerX" secondItem="OQA-lt-lxc" secondAttribute="centerX" id="dfM-bG-b9C"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelDescription" destination="Ijg-oz-rnG" id="oV0-uq-B7L"/>
+                        <outlet property="labelEventName" destination="q4W-gS-J9r" id="4gg-BN-X18"/>
+                        <outlet property="labelHostingGroup" destination="OQA-lt-lxc" id="fAj-Gx-qiL"/>
+                        <outlet property="labelRSVPCount" destination="sbo-bE-tak" id="Rce-oN-b8c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cs7-OW-5Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
