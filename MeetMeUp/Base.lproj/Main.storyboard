@@ -81,37 +81,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Event Name" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4W-gS-J9r">
-                                <rect key="frame" x="0.0" y="97" width="600" height="73"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Event Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4W-gS-J9r">
+                                <rect key="frame" x="0.0" y="73" width="600" height="73"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="RSVP Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbo-bE-tak">
-                                <rect key="frame" x="0.0" y="208" width="600" height="21"/>
+                                <rect key="frame" x="0.0" y="165" width="600" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hosting Group" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQA-lt-lxc">
-                                <rect key="frame" x="0.0" y="253" width="600" height="57"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hosting Group" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQA-lt-lxc">
+                                <rect key="frame" x="0.0" y="207" width="600" height="57"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijg-oz-rnG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijg-oz-rnG">
                                 <rect key="frame" x="0.0" y="334" width="600" height="233"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LG-AK-zc9">
+                                <rect key="frame" x="273" y="285" width="55" height="30"/>
+                                <state key="normal" title="Website">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DQ2-FL-MrG" kind="show" id="7ZL-K0-9oX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="q4W-gS-J9r" firstAttribute="leading" secondItem="w1N-mg-AGP" secondAttribute="leadingMargin" constant="-16" id="1TB-hR-SaN"/>
                             <constraint firstAttribute="centerX" secondItem="Ijg-oz-rnG" secondAttribute="centerX" id="5zu-Dr-vIH"/>
                             <constraint firstAttribute="centerX" secondItem="q4W-gS-J9r" secondAttribute="centerX" id="6Qs-vN-AkX"/>
+                            <constraint firstAttribute="centerX" secondItem="2LG-AK-zc9" secondAttribute="centerX" id="QvK-AR-VWJ"/>
                             <constraint firstAttribute="centerX" secondItem="sbo-bE-tak" secondAttribute="centerX" id="YCc-zH-rPF"/>
                             <constraint firstAttribute="centerX" secondItem="OQA-lt-lxc" secondAttribute="centerX" id="dfM-bG-b9C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ijg-oz-rnG" secondAttribute="trailing" constant="-16" id="q3s-F0-uLA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="q4W-gS-J9r" secondAttribute="trailing" constant="-16" id="sPB-gY-Qe3"/>
+                            <constraint firstItem="Ijg-oz-rnG" firstAttribute="leading" secondItem="w1N-mg-AGP" secondAttribute="leadingMargin" constant="-16" id="vmA-KO-p1j"/>
                         </constraints>
                     </view>
                     <connections>
@@ -124,6 +138,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cs7-OW-5Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1466" y="-557"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="LSs-zs-0wl">
+            <objects>
+                <viewController id="DQ2-FL-MrG" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oUp-BD-wWY"/>
+                        <viewControllerLayoutGuide type="bottom" id="UYd-C4-1sQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4rK-16-Vp7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6s6-B4-vhO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DQ2-FL-MrG" id="7dn-8m-zpf"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6s6-B4-vhO" firstAttribute="top" secondItem="4rK-16-Vp7" secondAttribute="top" id="5pq-iU-JPY"/>
+                            <constraint firstItem="UYd-C4-1sQ" firstAttribute="top" secondItem="6s6-B4-vhO" secondAttribute="bottom" id="IYz-FD-Yqq"/>
+                            <constraint firstItem="6s6-B4-vhO" firstAttribute="leading" secondItem="4rK-16-Vp7" secondAttribute="leading" id="LFu-N0-xjE"/>
+                            <constraint firstAttribute="trailing" secondItem="6s6-B4-vhO" secondAttribute="trailing" id="Po4-lb-eef"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="6s6-B4-vhO" id="SqG-6Z-Pqj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15c-2w-J1n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2116" y="-557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KJH-mq-d9M">

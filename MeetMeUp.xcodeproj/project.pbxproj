@@ -16,6 +16,7 @@
 		1210AE5D19EC576900BBAC4B /* MeetMeUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210AE5C19EC576900BBAC4B /* MeetMeUpTests.m */; };
 		1210AE6B19EC7C6900BBAC4B /* MeetUpEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210AE6A19EC7C6900BBAC4B /* MeetUpEvent.m */; };
 		1210AE6E19EC955700BBAC4B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210AE6D19EC955700BBAC4B /* DetailViewController.m */; };
+		1210AE7119ECB28000BBAC4B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210AE7019ECB28000BBAC4B /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		1210AE6A19EC7C6900BBAC4B /* MeetUpEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetUpEvent.m; path = ../MeetUpEvent.m; sourceTree = "<group>"; };
 		1210AE6C19EC955700BBAC4B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		1210AE6D19EC955700BBAC4B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		1210AE6F19ECB28000BBAC4B /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		1210AE7019ECB28000BBAC4B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				1210AE4819EC576900BBAC4B /* ViewController.m */,
 				1210AE6C19EC955700BBAC4B /* DetailViewController.h */,
 				1210AE6D19EC955700BBAC4B /* DetailViewController.m */,
+				1210AE6F19ECB28000BBAC4B /* WebViewController.h */,
+				1210AE7019ECB28000BBAC4B /* WebViewController.m */,
 				1210AE6919EC7C6900BBAC4B /* MeetUpEvent.h */,
 				1210AE6A19EC7C6900BBAC4B /* MeetUpEvent.m */,
 				1210AE4D19EC576900BBAC4B /* Images.xcassets */,
@@ -230,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1210AE6E19EC955700BBAC4B /* DetailViewController.m in Sources */,
+				1210AE7119ECB28000BBAC4B /* WebViewController.m in Sources */,
 				1210AE4919EC576900BBAC4B /* ViewController.m in Sources */,
 				1210AE4619EC576900BBAC4B /* AppDelegate.m in Sources */,
 				1210AE6B19EC7C6900BBAC4B /* MeetUpEvent.m in Sources */,

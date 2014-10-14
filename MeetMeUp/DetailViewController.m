@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "WebViewController.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *labelEventName;
@@ -27,11 +28,22 @@
     NSDictionary *forHost = [self.eventSegue objectForKey:@"group"];
     self.labelHostingGroup.text = [forHost objectForKey:@"name"];
 
+
+    //stringValue
+    NSString *rsvpString = [[self.eventSegue objectForKey:@"rsvp_limit"] stringValue];
+    self.labelRSVPCount.text = rsvpString;
+
     //convert int to string
     /*long rsvpInt = [self.eventSegue objectForKey:@"rsvp_limit"];
     NSString *rsvpString = [NSString stringWithFormat:@"%ld",rsvpInt];
     self.labelRSVPCount.text = rsvpString;*/
 
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UIButton *)button
+{
+    WebViewController *webViewController = [segue destinationViewController];
+    webViewController.webEventSegue = self.eventSegue;
 }
 
 
