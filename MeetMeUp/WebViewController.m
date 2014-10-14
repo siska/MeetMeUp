@@ -18,8 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    //pull out the URL string here from webEventSegue
-
+    NSString *url = [self.webEventSegue objectForKey:@"event_url"];
+    [self loadHomepage:url];
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
@@ -30,9 +30,12 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
-- (void) loadHomepage
+- (void) loadHomepage:(NSString *)urlString
 {
     //call this from viewDidLoad and load the homepage
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:urlRequest];
 }
 
 
